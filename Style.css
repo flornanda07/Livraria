@@ -17,3 +17,48 @@
     font-family:var(--font);
     font-weight:200;
   }
+
+  .Menu {
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding-left:60px;
+    padding-right:60px;
+    background-color:var(--bgmenu);
+  }
+
+  .Logo {
+    display:flex;
+    align-items:center;
+    gap:30px;
+   }
+
+   .ImagemLogo{
+    width:200px;
+   }
+
+   .Logo H1{
+    font-size:100px;
+    margin-bottom:40px;
+    color:var(--bgprimario);
+    }
+
+    .Links-menu ul{
+      display:flex;
+      gap:40px;
+      list-style:none;
+
+    }
+
+    .Links-menu a{
+      text-decoration:none;
+      color:var(--bgprimario);
+      font-size:var(--subtitulos);
+
+    }
+
+    .Banner {
+      display:flex;
+      background-color:var(--bgprimario);
+    }
+
