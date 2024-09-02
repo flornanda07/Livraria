@@ -4,7 +4,7 @@
     --cortexto:#072138;
     --bgbutton:#F5938B;
     --bgmenu:#EB445B;
-    --titulo:50px;
+    --titulo:80px;
     --paragrafos:32px;
     --subtitulos:40px;
     --font:"Katibeh", serif;
@@ -109,3 +109,43 @@
       box-shadow:5px 5px 10px rgba(0,0,0,60%);
       
      }
+
+     .Secao-sobre{
+      display:flex;
+      justify-content: space-around;
+      width:100%;
+      background-color:var(--bgsecundario);
+      align-items:start;
+
+     }
+
+     .Titulo-sobre{
+      font-family:var(--font);
+      font-size:var(--titulo);
+      text-align:center;
+     
+     }
+     .Container-sobre{
+      width:900px;
+      
+     }
+
+     .Caixa-de-texto{
+      background-color:var(--bgprimario);
+      height:500px;
+      position:relative;
+     }
+
+     .Paragrafo-sobre{
+      font-size:var(--paragrafos);
+      padding:40px;
+      position:absolute;
+      top:40px;
+     }
+
+     #Marca-paginas{
+      position:absolute;
+      right:20px;
+     }
+
+     
