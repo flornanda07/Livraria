@@ -1,0 +1,60 @@
+:root{
+    --bgprimario:#FEF0E7;
+    --bgsecundario:#F0CDAB;
+    --cortexto:#072138;
+    --bgbutton:#F5938B;
+    --bgmenu:#EB445B;
+    --titulo:80px;
+    --paragrafos:32px;
+    --subtitulos:40px;
+    --font:"Katibeh", serif;
+   }
+
+
+ .livros_div{
+   
+   min-height:500px; 
+   display:flex;
+   align-items:center;
+   padding:40px;
+
+   }
+
+
+.livro{
+    background-color:var(--bgsecundario);
+    width:350px;
+    height:450px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+    gap:10px;
+
+}
+
+
+
+.livro img{
+    width:160px;
+    align-self:center;
+}
+
+.livro h3{
+    font-size:40px;
+}
+
+.livro p{
+    font-size:25px;
+}
+
+.Botao_carrinho{
+    background-color:var(--bgbutton);
+    width:70%;
+    align-self:center;
+    height:40px;
+    border-radius:40px;
+    font-size:30px;
+    border:none;
+    box-shadow:5px 5px 5px rgba(0, 0, 0, 0.5);
+}
