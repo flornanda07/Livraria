@@ -7,7 +7,18 @@ buttons.forEach(function(button){
         const Preco = this.closest(".livro").querySelector("p").textContent
        
          const Item = {Nome_livro:Titulo,Quantidade:1,Valor:Preco}
-         localStorage.setItem("Carrinho",JSON.stringify(Item))
+
+         var Carrinho = JSON.parse(localStorage.getItem("Carrinho")) || []
+         
+         var LivroExistente = Carrinho.findIndex((i)=>i.Nome_livro===Titulo)
+         console.log(LivroExistente);
+
+         if (LivroExistente==-1){
+            Carrinho.push(Item)
+         }
+         
+
+        localStorage.setItem("Carrinho",JSON.stringify(Carrinho))
        
 
     })

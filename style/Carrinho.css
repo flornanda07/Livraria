@@ -1,3 +1,7 @@
 .Carrinho-container{
     min-height:615px;
 }
+
+.carrinhoVazio{
+    font-size:70px;
+}
