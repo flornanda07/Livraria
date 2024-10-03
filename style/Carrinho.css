@@ -5,3 +5,14 @@
 .carrinhoVazio{
     font-size:70px;
 }
+
+.Div_itens{
+    display:flex;
+    justify-content:space-between;
+    margin:auto;
+    width:600px;
+    height:150px;
+    margin-top:50px;
+    margin-bottom:50px;
+    background-color: blueviolet;
+}
