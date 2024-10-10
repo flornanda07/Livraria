@@ -9,10 +9,37 @@
 .Div_itens{
     display:flex;
     justify-content:space-between;
+    align-items: center;
+    gap:30px;
+    padding:20px;
     margin:auto;
     width:600px;
     height:150px;
     margin-top:50px;
     margin-bottom:50px;
-    background-color: blueviolet;
+    background-color:var(--bgsecundario);
+    border-radius:10px;
+    
 }
+
+.TextoItens{
+    font-family:var(--font);
+    font-size:40px;
+    
+}
+
+.Div_botoes{
+    display:flex;
+    gap:10px;
+}
+
+.Botoes_carrinho{
+ background-color:var(--bgbutton);
+ width:50px;
+ height:50px;
+ border-radius:10px;
+ cursor:pointer;
+}
+
+
+
