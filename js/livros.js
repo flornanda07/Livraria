@@ -1,4 +1,7 @@
 const buttons = document.querySelectorAll(".Botao_carrinho")
+const APIkey = "AIzaSyCIDbK7VcrZR8q67GMwbIBbQEENKKghzUg"
+const Livros_div = document.getElementById("livros_div")
+
 //console.log(buttons)
 
 buttons.forEach(function(button){
@@ -24,3 +27,30 @@ buttons.forEach(function(button){
     })
 })
 
+function Recuperar_livros(){
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=subject:romance&orderBy=relevance&key=${APIkey}`)
+    .then(response=>response.json())
+    .then(data=>{
+        //console.log(data)
+        data.items.forEach(book=>{
+            console.log(book.volumeInfo.title)
+            const div = document.createElement("div")
+            div.classList.add("livro")
+            Livros_div.appendChild(div)
+
+            const titulo = document.createElement("h3")
+            titulo.textContent = book.volumeInfo.title
+            div.appendChild(titulo)
+
+            const imagem = document.createElement("img")
+            imagem.src = book.volumeInfo.imageLinks.thumbnail
+            div.appendChild(imagem)
+
+            /*const preco = document.createElement("p")
+            preco.textContent = "R$" + book.volumeInfo.ListPrice?.amount || "0,00"
+            div.appendChild(preco)*/
+        })
+    })
+}
+    Recuperar_livros()
+    
