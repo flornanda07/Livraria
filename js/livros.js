@@ -1,6 +1,7 @@
 const buttons = document.querySelectorAll(".Botao_carrinho")
 const APIkey = "AIzaSyCIDbK7VcrZR8q67GMwbIBbQEENKKghzUg"
 const Livros_div = document.getElementById("livros_div")
+const Book_buttons = document.querySelectorAll(".book")
 
 //console.log(buttons)
 
@@ -28,7 +29,20 @@ buttons.forEach(function(button){
 })
 
 function Recuperar_livros(){
-    fetch(`https://www.googleapis.com/books/v1/volumes?q=subject:romance&orderBy=relevance&key=${APIkey}`)
+    Book_buttons.forEach(button=>{
+        console.log(button)
+        button.addEventListener("click",function(){
+            const genero=this.getAttribute("data-genero")
+            console.log(genero)
+            getBooks(genero)
+            
+        })
+    })
+   
+}
+
+async function getBooks(genero){
+    await fetch(`https://www.googleapis.com/books/v1/volumes?q=subject:${genero}&langRestrict=en&maxResults=40`)
     .then(response=>response.json())
     .then(data=>{
         //console.log(data)
@@ -52,5 +66,6 @@ function Recuperar_livros(){
         })
     })
 }
-    Recuperar_livros()
+      getBooks("science+fiction")
+    //Recuperar_livros()
     
