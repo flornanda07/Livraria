@@ -25,7 +25,7 @@
 .livro{
     background-color:var(--bgsecundario);
     width:330px;
-    height:450px;
+    height:500px;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -35,19 +35,16 @@
 }
 
 
-
 .livro img{
-    width:160px;
+    width:40%;
     align-self:center;
 }
 
 .livro h3{
-    font-size:40px;
+    font-size:30px;
+    margin-bottom:10px;
 }
 
-.livro p{
-    font-size:25px;
-}
 
 .Botao_carrinho{
     background-color:var(--bgbutton);

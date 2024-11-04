@@ -1,4 +1,3 @@
-import { Add_carrinho } from "./livros.js"
 const Livros_div = document.getElementById("livros_div")
 
 
@@ -21,14 +20,37 @@ async function getBooks(genero){
             imagem.src = book.volumeInfo.imageLinks.thumbnail
             div.appendChild(imagem)
 
-            const preco = document.createElement("p")
+            /*const preco = document.createElement("p")
             preco.textContent = "R$30,00"
-            div.appendChild(preco)
+            div.appendChild(preco)*/
 
             const button = document.createElement("button")
             button.innerText = "Adicionar ao carrinho"
             button.classList.add("Botao_carrinho")
             div.appendChild(button)
+            const buttons = document.querySelectorAll(".Botao_carrinho")
+            buttons.forEach(function(button){ 
+                button.addEventListener("click",function(){
+                    const Titulo = this.closest(".livro").querySelector("h3").textContent
+                    const Preco = this.closest(".livro").querySelector("p").textContent
+                   
+                     const Item = {Nome_livro:Titulo,Quantidade:1,Valor:Preco}
+            
+                     var Carrinho = JSON.parse(localStorage.getItem("Carrinho")) || []
+                     
+                     var LivroExistente = Carrinho.findIndex((i)=>i.Nome_livro===Titulo)
+                     console.log(LivroExistente);
+            
+                     if (LivroExistente==-1){
+                        Carrinho.push(Item)
+                     }
+                     
+            
+                    localStorage.setItem("Carrinho",JSON.stringify(Carrinho))
+                   
+            
+                })
+            })
         })
     })
 }
@@ -36,5 +58,5 @@ async function getBooks(genero){
 document.addEventListener("DOMContentLoaded",async function(){
     var Genero = localStorage.getItem("Genero") || ""
     await getBooks(Genero)
-    Add_carrinho()
+    
 })
