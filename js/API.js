@@ -27,14 +27,16 @@ async function getBooks(genero){
             const button = document.createElement("button")
             button.innerText = "Adicionar ao carrinho"
             button.classList.add("Botao_carrinho")
+            
             div.appendChild(button)
             const buttons = document.querySelectorAll(".Botao_carrinho")
             buttons.forEach(function(button){ 
+                console.log(button)
                 button.addEventListener("click",function(){
                     const Titulo = this.closest(".livro").querySelector("h3").textContent
-                    const Preco = this.closest(".livro").querySelector("p").textContent
+                   // const Preco = this.closest(".livro").querySelector("p").textContent
                    
-                     const Item = {Nome_livro:Titulo,Quantidade:1,Valor:Preco}
+                     const Item = {Nome_livro:Titulo,Quantidade:1}
             
                      var Carrinho = JSON.parse(localStorage.getItem("Carrinho")) || []
                      

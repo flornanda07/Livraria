@@ -1,456 +1,493 @@
-:root{
-    --bgprimario:#FEF0E7;
-    --bgsecundario:#F0CDAB;
-    --cortexto:#072138;
-    --bgbutton:#F5938B;
-    --bgmenu:#EB445B;
-    --titulo:80px;
-    --paragrafos:32px;
-    --subtitulos:40px;
-    --font:"Katibeh", serif;
-   }
+:root {
+  --bgprimario: #FEF0E7;
+  --bgsecundario: #F0CDAB;
+  --cortexto: #072138;
+  --bgbutton: #F5938B;
+  --bgmenu: #EB445B;
+  --titulo: 80px;
+  --paragrafos: 32px;
+  --subtitulos: 40px;
+  --font: "Katibeh", serif;
+}
 
 
-  * {
-    margin:0;
-    padding:0;
-    font-family:var(--font);
-    font-weight:200;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  font-weight: 200;
+}
+
+.Menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-color: var(--bgmenu);
+
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.ImagemLogo {
+  width: 200px;
+}
+
+.Logo H1 {
+  font-size: 100px;
+  margin-bottom: 40px;
+  color: var(--bgprimario);
+}
+
+.Links-menu ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+
+}
+
+.Links-menu a {
+  text-decoration: none;
+  color: var(--bgprimario);
+  font-size: var(--subtitulos);
+
+}
+
+.Banner {
+  display: flex;
+  background-color: var(--bgprimario);
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 600px;
+}
+
+.Titulo-banner {
+  margin-left: 200px;
+  font-size: 50px;
+  color: var(--cortexto);
+
+}
+
+.Botao {
+  background-color: var(--bgbutton);
+  color: var(--cortexto);
+  width: 300px;
+  height: 60px;
+  position: relative;
+  left: 30%;
+  top: 35px;
+  border-radius: 50px;
+  font-size: 23px;
+  border-width: 0;
+}
+
+
+.Secao-livros {
+  height: 900px;
+  background-color: var(--bgsecundario);
+  display: flex;
+  justify-content: space-evenly;
+  gap: 100px;
+  flex-wrap: wrap;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.book {
+  width: 300px;
+  font-size: var(--subtitulos);
+  background-color: var(--bgbutton);
+  border-radius: 20px;
+  border-width: 0;
+  color: var(--cortexto);
+  height: 350px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 60%);
+
+}
+
+.Secao-sobre {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: var(--bgsecundario);
+  align-items: start;
+
+}
+
+.Titulo-sobre {
+  font-family: var(--font);
+  font-size: var(--titulo);
+  text-align: center;
+
+}
+
+.Container-sobre {
+  width: 900px;
+
+}
+
+.Caixa-de-texto {
+  background-color: var(--bgprimario);
+  height: 500px;
+  position: relative;
+}
+
+.Paragrafo-sobre {
+  font-size: var(--paragrafos);
+  padding: 40px;
+  position: absolute;
+  top: 40px;
+}
+
+#Marca-paginas {
+  position: absolute;
+  right: 20px;
+}
+
+.Secao-FAQ {
+  background-color: var(--bgprimario);
+  height: auto;
+  padding-top: 90px;
+  padding: 50px;
+}
+
+.FAQ {
+  width: 958px;
+  margin: auto;
+  border: 3px solid var(--cortexto);
+
+
+}
+
+.Secao-FAQ H1 {
+  font-size: var(--titulo);
+  color: var(--cortexto);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.Caixa-pergunta {
+  width: 100%;
+}
+
+.perguntas-faq {
+  width: 100%;
+  height: 50px;
+  background-color: var(--bgbutton);
+  color: var(--cortexto);
+  border: 3px solid var(--cortexto);
+  font-size: 30px;
+  cursor: pointer;
+
+}
+
+.respostas-faq {
+  height: 70px;
+  background-color: var(--bgprimario);
+  color: var(--cortexto);
+  font-size: 20px;
+  padding: 20px;
+  display: block;
+
+}
+
+.Rodape {
+  background-color: var(--bgbutton);
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom:30px;
+}
+
+.redesSociaisRodape {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.redesSociaisRodape p {
+  font-size: 20px;
+}
+
+.redesSociais h3 {
+  font-size: 40px;
+}
+
+.Informacoes {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.frete {
+  display: flex;
+  font-size: 25px;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+
+}
+
+.logoMenor {
+  width: 15%;
+  height: 170px;
+}
+
+
+@media(min-width:360px) and (max-width:768px) {
 
   .Menu {
-    display:flex;
+    padding: 20px;
+  }
+
+  .ImagemLogo {
+    width: 80px;
+  }
+
+  .Titulomenu {
+    display: none;
+  }
+
+  .Links-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    justify-content: center;
+    margin-left: 20px;
+
+  }
+
+  .Links-menu a {
+    font-size: 25px;
+  }
+
+  .Banner {
+    align-items: start;
+    width: 100%;
+    min-height: 100px;
+    flex-direction: column;
+  }
+
+  .Titulo-banner {
+    margin-left: 20px;
+    font-size: 30px;
+    margin-top: 20px;
+
+  }
+
+  .Botao {
+    width: 60%;
+    height: 60px;
+    position: relative;
+    left: 20%;
+    top: 35px;
+    font-size: 20px;
+
+  }
+
+  #livraria {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .Secao-livros {
+    height: 20%;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .book {
+    width: 150px;
+    font-size: 30px;
+    height: 150px;
+
+  }
+
+  .book img {
+    width: 70px;
+    height: 70px;
+
+  }
+
+
+  .Secao-sobre {
+    flex-direction: column;
+    margin: auto;
     align-items: center;
-    justify-content:space-between;
-    padding-left:60px;
-    padding-right:60px;
-    background-color:var(--bgmenu);
-    
   }
 
-  .Logo {
-    display:flex;
-    align-items:center;
-    gap:30px;
-   }
+  .Titulo-sobre {
+    font-family: var(--font);
+    font-size: 40px;
+    text-align: center;
 
-   .ImagemLogo{
-    width:200px;
-   }
-
-   .Logo H1{
-    font-size:100px;
-    margin-bottom:40px;
-    color:var(--bgprimario);
-    }
-
-    .Links-menu ul{
-      display:flex;
-      gap:40px;
-      list-style:none;
-
-    }
-
-    .Links-menu a{
-      text-decoration:none;
-      color:var(--bgprimario);
-      font-size:var(--subtitulos);
-
-    }
-
-    .Banner {
-      display:flex;
-      background-color:var(--bgprimario);
-      align-items:start;
-      justify-content:space-between;
-      width:100%;
-      min-height:600px;
-    }
-
-    .Titulo-banner {
-      margin-left:200px;
-      font-size:50px;
-      color:var(--cortexto);
-      
-    }
-
-    .Botao {
-      background-color:var(--bgbutton);
-      color:var(--cortexto);
-      width:300px;
-      height:60px;
-      position:relative;
-      left:30%;
-      top:35px;
-      border-radius:50px;
-      font-size:23px;
-      border-width:0;
-     }
-
-    
-     .Secao-livros{
-     height:900px;
-     background-color:var(--bgsecundario);
-     display:flex;
-     justify-content:space-evenly;
-     gap:100px;
-     flex-wrap:wrap;
-     padding-top:70px;
-     padding-bottom:70px;
-     }
-
-     .book{
-      width:300px;
-      font-size:var(--subtitulos);
-      background-color:var(--bgbutton);
-      border-radius:20px;
-      border-width:0;
-      color:var(--cortexto);
-      height:350px;
-      box-shadow:5px 5px 10px rgba(0,0,0,60%);
-      
-     }
-
-     .Secao-sobre{
-      display:flex;
-      justify-content: space-around;
-      width:100%;
-      background-color:var(--bgsecundario);
-      align-items:start;
-
-     }
-
-     .Titulo-sobre{
-      font-family:var(--font);
-      font-size:var(--titulo);
-      text-align:center;
-     
-     }
-     .Container-sobre{
-      width:900px;
-      
-     }
-
-     .Caixa-de-texto{
-      background-color:var(--bgprimario);
-      height:500px;
-      position:relative;
-     }
-
-     .Paragrafo-sobre{
-      font-size:var(--paragrafos);
-      padding:40px;
-      position:absolute;
-      top:40px;
-     }
-
-     #Marca-paginas{
-      position:absolute;
-      right:20px;
-     }
-
-    .Secao-FAQ{
-      background-color:var(--bgprimario);
-      height:auto;
-      padding-top:90px;
-      padding:50px;
-    }
-
-    .FAQ{
-      width:958px;
-      margin:auto;
-      border:3px solid var(--cortexto);
-      
-      
-   }
-
-   .Secao-FAQ H1{
-    font-size:var(--titulo);
-    color:var(--cortexto);
-    text-align:center;
-    margin-bottom:40px;
-   }
-
-    .Caixa-pergunta{
-      width:100%;
-    }
-
-    .perguntas-faq{
-      width:100%;
-      height:50px;
-      background-color:var(--bgbutton);
-      color:var(--cortexto);
-      border:3px solid var(--cortexto);
-      font-size:30px;
-      cursor:pointer;
-
-    }
-
-    .respostas-faq{
-      height:70px;
-      background-color:var(--bgprimario);
-      color:var(--cortexto);
-      font-size:20px;
-      padding:20px;
-      display:block;
-      
-    }
-
-    .Rodape{
-      background-color:var(--bgbutton);
-      height:200px;
-      display:flex;
-      justify-content:space-between;
-      }
-
-  .redesSociaisRodape{
-    display:flex;
-    gap:10px;
-    padding:10px;
   }
 
-  .redesSociaisRodape p{
-   font-size:20px;
+  .Container-sobre {
+    height: auto;
+    width: 90%;
+    background-color: var(--bgprimario);
+    margin-bottom: 40px;
+    justify-content: center;
+
+
   }
 
-  .redesSociais h3{
-    font-size:40px;
-  }
-  
-  .Informacoes{
-    display:flex;
-    flex-direction:column;
-    padding:10px;
+  .Caixa-de-texto {
+    height: 450px;
+
+
   }
 
-  .frete{
-    display:flex;
-    font-size:25px;
+  .Paragrafo-sobre {
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+    top: 20px;
+
+
+  }
+
+  #Marca-paginas {
+    position: absolute;
+    top: -45px;
+    right: 10px;
+    width: 40px;
+    height: 45px;
+
+  }
+
+  #Pilha-livros {
+    height: 400px;
+
+  }
+
+
+  .Secao-FAQ {
+    height: auto;
+    padding-top: 90px;
+    padding: 5px;
+    margin-bottom: 30px;
+  }
+
+  .FAQ {
+    width: 95%;
+    margin: auto;
+  }
+
+  .Caixa-pergunta {
+    width: 100%;
+  }
+
+  .perguntas-faq {
+    width: 100%;
+    height: 65px;
+    font-size: 25px;
+    cursor: pointer;
+
+  }
+
+  .respostas-faq {
+    height: auto;
+    background-color: var(--bgprimario);
+    color: var(--cortexto);
+    font-size: 20px;
+    padding: 20px;
+    display: block;
+
+  }
+
+
+  .Rodape {
+    height: auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top:20px;
-    gap:10px;
-    
+    justify-content: center;
   }
 
-  .logoMenor{
-    width:15%;
-    height:170px;
+  .redesSociaisRodape {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
   }
 
+  .redesSociaisRodape p {
+    font-size: 20px;
+  }
 
-  @media(min-width:360px) and (max-width:768px){
+  .redesSociais h3 {
+    font-size: 40px;
+  }
 
+  .Informacoes {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
 
-    .Menu {
-        padding:20px;
-    }
-      
-     .ImagemLogo{
-      width:80px;
-     }
-     
-     .Titulomenu{
-      display:none;
-     }
+  .frete {
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
 
-     .Links-menu ul{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      list-style:none;
-      justify-content:center;
-      margin-left:20px;
+  }
 
-    }
+  .logoMenor {
+    width: 30%;
+    height: 100px;
+  }
 
-    .Links-menu a{
-       font-size:25px; }
+  .livro{
+    max-height:400px;
+  }
 
-       .Banner {
-        align-items:start;
-        width:100%;
-        min-height:100px;
-        flex-direction:column;
-      }
-  
-      .Titulo-banner {
-        margin-left:20px;
-        font-size:30px;
-        margin-top:20px;
-        
-      }
-  
-      .Botao {
-        width:60%;
-        height:60px;
-        position:relative;
-        left:20%;
-        top:35px;
-        font-size:20px;
+  .carrinhoVazio{
+    text-align: center;
+    margin: auto;
+  }
 
-       }
-
-      #livraria{
-        width:100%;
-        margin-top:50px;
-      }
-
-      .Secao-livros{
-        height:20%;
-        gap:30px;
-        flex-wrap:wrap;
-        padding-top:10px;
-        padding-bottom:10px;
-        }
+  .Div_itens{
+    align-items: center;
+    padding:20px;
+    margin:auto;
+    width:80%;
+    height:120px;
+    margin-top:50px;
+    margin-bottom:50px;
    
-        .book{
-         width:150px;
-         font-size:30px;
-         height:150px;
-         
-        }
-        
-        .book img {
-          width:70px;
-          height:70px;
-          
-        }
-
-
-        .Secao-sobre{
-          flex-direction:column;
-          margin:auto;
-          align-items:center;
-         }
     
-         .Titulo-sobre{
-          font-family:var(--font);
-          font-size:40px;
-          text-align:center;
-         
-         }
-         .Container-sobre{
-          height:auto;
-          width:90%;
-          background-color:var(--bgprimario);
-          margin-bottom:40px;
-          justify-content:center;
-          
-          
-         }
-    
-         .Caixa-de-texto{
-          height:450px;
-          
-          
-         }
-    
-         .Paragrafo-sobre{
-          padding:20px;
-          text-align:center;
-          font-size:25px;
-          top:20px;
-          
+}
 
-         }
-    
-         #Marca-paginas{
-          position:absolute;
-          top:-45px;
-          right:10px;
-          width:40px;
-          height:45px;
-          
-         }
+.TextoItens{
+  font-family:var(--font);
+  font-size:25px;
+  
+}
 
-         #Pilha-livros{
-          height:400px;
-          
-         }
+.Div_botoes{
+  display:flex;
+  gap:10px;
+}
+
+.Botoes_carrinho{
+background-color:var(--bgbutton);
+width:40px;
+height:40px;
+border-radius:10px;
+cursor:pointer;
+}
 
 
-         .Secao-FAQ{
-          height:auto;
-          padding-top:90px;
-          padding:5px;
-          margin-bottom:30px;
-         }
-
-         .FAQ{
-          width:95%;
-          margin:auto;
-          }
-
-          .Caixa-pergunta{
-            width:100%;
-          }
-      
-          .perguntas-faq{
-            width:100%;
-            height:65px;
-            font-size:25px;
-            cursor:pointer;
-      
-          }
-      
-          .respostas-faq{
-            height:auto;
-            background-color:var(--bgprimario);
-            color:var(--cortexto);
-            font-size:20px;
-            padding:20px;
-            display:block;
-            
-          }
-
-
-          .Rodape{
-            height:auto;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content:center;
-            }
-      
-        .redesSociaisRodape{
-          display:flex;
-          gap:10px;
-          padding:10px;
-        }
-      
-        .redesSociaisRodape p{
-         font-size:20px;
-        }
-      
-        .redesSociais h3{
-          font-size:40px;
-        }
-        
-        .Informacoes{
-          display:flex;
-          flex-direction:column;
-          padding:10px;
-        }
-      
-        .frete{
-          display:flex;
-          font-size:25px;
-          align-items: center;
-          margin-top:20px;
-          gap:10px;
-          
-        }
-      
-        .logoMenor{
-          width:30%;
-          height:100px;
-        }
-
-
-         
-
-
-
-  }
-
-     
+}
